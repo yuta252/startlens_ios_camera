@@ -1,0 +1,14 @@
+//
+//  Localizable.strings
+//  StartlensCamera
+//
+//  Created by 中野　裕太 on 2021/02/24.
+//  Copyright © 2021 Nakano Yuta. All rights reserved.
+//
+
+
+// Common
+"settingVersionNumber" = "1.0.0";
+
+// LogInSelectVC
+"logInButtonText" = "ログイン";
