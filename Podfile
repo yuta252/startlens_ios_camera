@@ -12,4 +12,8 @@ target 'StartlensCamera' do
   pod 'Alamofire'
   # Handle image
   pod 'SDWebImage'
+  # Text field
+  pod 'TextFieldEffects'
+  # Keyboard
+  pod 'IQKeyboardManagerSwift'
 end
