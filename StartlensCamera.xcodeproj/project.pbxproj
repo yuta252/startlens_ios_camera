@@ -18,6 +18,9 @@
 		E949A01625E6299A00A8A808 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A01525E6299A00A8A808 /* Constants.swift */; };
 		E949A01B25E6400E00A8A808 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E949A01D25E6400E00A8A808 /* Localizable.strings */; };
 		E949A02125E640C700A8A808 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02025E640C700A8A808 /* StringExtension.swift */; };
+		E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */; };
+		E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02425E679C400A8A808 /* LogInViewController.swift */; };
+		E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02625E6993B00A8A808 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		E949A01C25E6400E00A8A808 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E949A01E25E6401600A8A808 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E949A02025E640C700A8A808 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderedTextView.swift; sourceTree = "<group>"; };
+		E949A02425E679C400A8A808 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		E949A02625E6993B00A8A808 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 				E9499FFC25E61D3500A8A808 /* AppDelegate.swift */,
 				E9499FFE25E61D3500A8A808 /* SceneDelegate.swift */,
 				E949A00025E61D3500A8A808 /* LoginSelectViewController.swift */,
+				E949A02425E679C400A8A808 /* LogInViewController.swift */,
+				E949A02625E6993B00A8A808 /* homeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E949A02025E640C700A8A808 /* StringExtension.swift */,
+				E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -256,9 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E949A01625E6299A00A8A808 /* Constants.swift in Sources */,
+				E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */,
 				E949A00125E61D3500A8A808 /* LoginSelectViewController.swift in Sources */,
 				E949A02125E640C700A8A808 /* StringExtension.swift in Sources */,
 				E949A01425E6290A00A8A808 /* ThemeColor.swift in Sources */,
+				E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */,
+				E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */,
 				E9499FFD25E61D3500A8A808 /* AppDelegate.swift in Sources */,
 				E9499FFF25E61D3500A8A808 /* SceneDelegate.swift in Sources */,
 			);

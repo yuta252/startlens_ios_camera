@@ -20,6 +20,7 @@ class LoginSelectViewController: UIViewController {
     }
     
     @IBAction func logInAction(_ sender: Any) {
+        print("pushed")
         performSegue(withIdentifier: "logIn", sender: nil)
     }
     

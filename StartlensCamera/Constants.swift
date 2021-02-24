@@ -11,7 +11,9 @@ import Foundation
 
 struct Constants{
     // URL
-    static let baseURL = "http://api.startlens.jp"
+    // static let baseURL = "http://api.startlens.jp"
+    static let baseURL = "http://0.0.0.0/api/v1/"
+    static let tokenURL = "token"
     
     static let appName = "Start Lens"
 }

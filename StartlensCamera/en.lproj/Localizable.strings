@@ -13,3 +13,11 @@
 // LogInSelectVC
 "logInButtonText" = "Sign in";
 
+// LogInVC
+"emailInputPlace" = "Email address";
+"passwordInputPlace" = "Password";
+"signupErrorMessage" = "Password must be at least 8 characters in length.";
+"emailValidMessage" = "Enter email address";
+"passValidMessage" = "Enter password";
+"authValidFail" = "Email address or password is wrong.";
+"emailValidMessage2" = "The email address is not in the correct format.";

@@ -12,3 +12,12 @@
 
 // LogInSelectVC
 "logInButtonText" = "ログイン";
+
+// LogInVC
+"emailInputPlace" = "メールアドレス";
+"passwordInputPlace" = "パスワード";
+"signupErrorMessage" = "パスワードは、半角英数8文字以上で入力してください。";
+"emailValidMessage" = "メールアドレスを入力してください";
+"passValidMessage" = "パスワードを入力してください";
+"authValidFail" = "メールアドレスかパスワードが間違っています。";
+"emailValidMessage2" = "メールアドレスが正しいフォーマットではありません";
