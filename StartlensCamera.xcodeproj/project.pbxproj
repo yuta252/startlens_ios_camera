@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965145D4CBAA9D69F128E84B /* Pods_StartlensCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEE21563BCDBA616EE7D315 /* Pods_StartlensCamera.framework */; };
 		E9499FFD25E61D3500A8A808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9499FFC25E61D3500A8A808 /* AppDelegate.swift */; };
 		E9499FFF25E61D3500A8A808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9499FFE25E61D3500A8A808 /* SceneDelegate.swift */; };
 		E949A00125E61D3500A8A808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A00025E61D3500A8A808 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59EB4048661EEE4987F590E2 /* Pods-StartlensCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.release.xcconfig"; path = "Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.release.xcconfig"; sourceTree = "<group>"; };
+		B5DC6B359076DBB0B200DDCC /* Pods-StartlensCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.debug.xcconfig"; path = "Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		DCEE21563BCDBA616EE7D315 /* Pods_StartlensCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartlensCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9499FF925E61D3500A8A808 /* StartlensCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StartlensCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9499FFC25E61D3500A8A808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9499FFE25E61D3500A8A808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965145D4CBAA9D69F128E84B /* Pods_StartlensCamera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4029A5A4C75186F9E3A520D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5DC6B359076DBB0B200DDCC /* Pods-StartlensCamera.debug.xcconfig */,
+				59EB4048661EEE4987F590E2 /* Pods-StartlensCamera.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E9499FF025E61D3500A8A808 = {
 			isa = PBXGroup;
 			children = (
 				E9499FFB25E61D3500A8A808 /* StartlensCamera */,
 				E9499FFA25E61D3500A8A808 /* Products */,
+				4029A5A4C75186F9E3A520D5 /* Pods */,
+				FA4101BE9521F9B79FA49BAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = StartlensCamera;
 			sourceTree = "<group>";
 		};
+		FA4101BE9521F9B79FA49BAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCEE21563BCDBA616EE7D315 /* Pods_StartlensCamera.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E949A00D25E61D3C00A8A808 /* Build configuration list for PBXNativeTarget "StartlensCamera" */;
 			buildPhases = (
+				11AA272A425FD6F7A7750A61 /* [CP] Check Pods Manifest.lock */,
 				E9499FF525E61D3500A8A808 /* Sources */,
 				E9499FF625E61D3500A8A808 /* Frameworks */,
 				E9499FF725E61D3500A8A808 /* Resources */,
+				4CDEB576887ECC7ABD93F2F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11AA272A425FD6F7A7750A61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StartlensCamera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CDEB576887ECC7ABD93F2F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9499FF525E61D3500A8A808 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		E949A00E25E61D3C00A8A808 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5DC6B359076DBB0B200DDCC /* Pods-StartlensCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		E949A00F25E61D3C00A8A808 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59EB4048661EEE4987F590E2 /* Pods-StartlensCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
