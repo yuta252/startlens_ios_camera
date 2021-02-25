@@ -21,3 +21,6 @@
 "passValidMessage" = "Enter password";
 "authValidFail" = "Email address or password is wrong.";
 "emailValidMessage2" = "The email address is not in the correct format.";
+
+// homeVC
+"noImageTitle" = "No image";

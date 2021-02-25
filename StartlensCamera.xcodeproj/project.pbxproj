@@ -21,6 +21,13 @@
 		E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */; };
 		E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02425E679C400A8A808 /* LogInViewController.swift */; };
 		E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02625E6993B00A8A808 /* homeViewController.swift */; };
+		E949A02925E769BB00A8A808 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02825E769BA00A8A808 /* Picture.swift */; };
+		E949A02B25E76A2F00A8A808 /* MultiExhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02A25E76A2F00A8A808 /* MultiExhibit.swift */; };
+		E949A02D25E76ACF00A8A808 /* Exhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02C25E76ACF00A8A808 /* Exhibit.swift */; };
+		E949A02F25E76CAD00A8A808 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02E25E76CAD00A8A808 /* Meta.swift */; };
+		E949A03125E76F2F00A8A808 /* PagedExhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03025E76F2F00A8A808 /* PagedExhibit.swift */; };
+		E949A03425E7BCA000A8A808 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03225E7BCA000A8A808 /* PictureCell.swift */; };
+		E949A03525E7BCA000A8A808 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E949A03325E7BCA000A8A808 /* PictureCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +52,13 @@
 		E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderedTextView.swift; sourceTree = "<group>"; };
 		E949A02425E679C400A8A808 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E949A02625E6993B00A8A808 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		E949A02825E769BA00A8A808 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		E949A02A25E76A2F00A8A808 /* MultiExhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiExhibit.swift; sourceTree = "<group>"; };
+		E949A02C25E76ACF00A8A808 /* Exhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exhibit.swift; sourceTree = "<group>"; };
+		E949A02E25E76CAD00A8A808 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		E949A03025E76F2F00A8A808 /* PagedExhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedExhibit.swift; sourceTree = "<group>"; };
+		E949A03225E7BCA000A8A808 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
+		E949A03325E7BCA000A8A808 /* PictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,11 @@
 		E949A01025E627E400A8A808 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E949A02825E769BA00A8A808 /* Picture.swift */,
+				E949A02A25E76A2F00A8A808 /* MultiExhibit.swift */,
+				E949A02C25E76ACF00A8A808 /* Exhibit.swift */,
+				E949A02E25E76CAD00A8A808 /* Meta.swift */,
+				E949A03025E76F2F00A8A808 /* PagedExhibit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +133,8 @@
 				E949A00225E61D3500A8A808 /* Main.storyboard */,
 				E949A00525E61D3C00A8A808 /* Assets.xcassets */,
 				E949A00725E61D3C00A8A808 /* LaunchScreen.storyboard */,
+				E949A03225E7BCA000A8A808 /* PictureCell.swift */,
+				E949A03325E7BCA000A8A808 /* PictureCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +233,7 @@
 				E949A01B25E6400E00A8A808 /* Localizable.strings in Resources */,
 				E949A00625E61D3C00A8A808 /* Assets.xcassets in Resources */,
 				E949A00425E61D3500A8A808 /* Main.storyboard in Resources */,
+				E949A03525E7BCA000A8A808 /* PictureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,13 +286,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E949A02B25E76A2F00A8A808 /* MultiExhibit.swift in Sources */,
+				E949A03125E76F2F00A8A808 /* PagedExhibit.swift in Sources */,
+				E949A03425E7BCA000A8A808 /* PictureCell.swift in Sources */,
 				E949A01625E6299A00A8A808 /* Constants.swift in Sources */,
 				E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */,
 				E949A00125E61D3500A8A808 /* LoginSelectViewController.swift in Sources */,
 				E949A02125E640C700A8A808 /* StringExtension.swift in Sources */,
+				E949A02F25E76CAD00A8A808 /* Meta.swift in Sources */,
 				E949A01425E6290A00A8A808 /* ThemeColor.swift in Sources */,
 				E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */,
+				E949A02925E769BB00A8A808 /* Picture.swift in Sources */,
 				E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */,
+				E949A02D25E76ACF00A8A808 /* Exhibit.swift in Sources */,
 				E9499FFD25E61D3500A8A808 /* AppDelegate.swift in Sources */,
 				E9499FFF25E61D3500A8A808 /* SceneDelegate.swift in Sources */,
 			);
