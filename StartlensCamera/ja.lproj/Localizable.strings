@@ -21,3 +21,6 @@
 "passValidMessage" = "パスワードを入力してください";
 "authValidFail" = "メールアドレスかパスワードが間違っています。";
 "emailValidMessage2" = "メールアドレスが正しいフォーマットではありません";
+
+// homeVC
+"noImageTitle" = "画像はありません";
