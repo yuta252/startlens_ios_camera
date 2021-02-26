@@ -11,11 +11,12 @@ import Alamofire
 import SwiftyJSON
 import SDWebImage
 
-class homeViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var noImageTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var newButtonView: UIButton!
+    
     var token = String()
     var pagedExhibit: PagedExhibit?
     let refresh = UIRefreshControl()
@@ -39,7 +40,7 @@ class homeViewController: UIViewController {
         tableView.estimatedRowHeight = 150
         tableView.separatorStyle = .none
         tableView.refreshControl = refresh
-        refresh.addTarget(self, action: #selector(homeViewController.update), for: .valueChanged)
+        refresh.addTarget(self, action: #selector(HomeViewController.update), for: .valueChanged)
         
         fetchData()
     }
@@ -49,6 +50,11 @@ class homeViewController: UIViewController {
         tableView.reloadData()
     }
     
+    @IBAction func newButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "newExhibit", sender: nil)
+    }
+    
+    
     @objc func update() {
         fetchData()
         tableView.reloadData()
@@ -56,8 +62,8 @@ class homeViewController: UIViewController {
     }
     
     func setupUI() {
-        print("noImageTitle".localized)
         noImageTitle.text = "noImageTitle".localized
+        newButtonView.layer.cornerRadius = 45.0
     }
     
     func fetchData() {
@@ -85,7 +91,7 @@ class homeViewController: UIViewController {
     }
 }
 
-extension homeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pagedExhibit?.data.count ?? 0
     }
@@ -116,7 +122,7 @@ extension homeViewController: UITableViewDataSource {
     }
 }
 
-extension homeViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

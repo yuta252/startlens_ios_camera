@@ -24,3 +24,10 @@
 
 // homeVC
 "noImageTitle" = "画像はありません";
+
+// newExhibitVC
+"exhibitNameText" = "対象物名称";
+"exhibitDescriptionText" = "対象物説明";
+"cameraButtonText" = "写真を撮る";
+"exhibitNameError" = "対象物名称を入力してください";
+"exhibitDescriptionError" = "対象物説明を入力してください";

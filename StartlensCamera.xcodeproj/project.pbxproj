@@ -20,7 +20,7 @@
 		E949A02125E640C700A8A808 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02025E640C700A8A808 /* StringExtension.swift */; };
 		E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */; };
 		E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02425E679C400A8A808 /* LogInViewController.swift */; };
-		E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02625E6993B00A8A808 /* homeViewController.swift */; };
+		E949A02725E6993C00A8A808 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02625E6993B00A8A808 /* HomeViewController.swift */; };
 		E949A02925E769BB00A8A808 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02825E769BA00A8A808 /* Picture.swift */; };
 		E949A02B25E76A2F00A8A808 /* MultiExhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02A25E76A2F00A8A808 /* MultiExhibit.swift */; };
 		E949A02D25E76ACF00A8A808 /* Exhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A02C25E76ACF00A8A808 /* Exhibit.swift */; };
@@ -28,6 +28,9 @@
 		E949A03125E76F2F00A8A808 /* PagedExhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03025E76F2F00A8A808 /* PagedExhibit.swift */; };
 		E949A03425E7BCA000A8A808 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03225E7BCA000A8A808 /* PictureCell.swift */; };
 		E949A03525E7BCA000A8A808 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E949A03325E7BCA000A8A808 /* PictureCell.xib */; };
+		E949A03725E7DD2600A8A808 /* NewExhibitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03625E7DD2500A8A808 /* NewExhibitViewController.swift */; };
+		E949A03925E7F4E700A8A808 /* PostExhibit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03825E7F4E700A8A808 /* PostExhibit.swift */; };
+		E949A03B25E8001800A8A808 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949A03A25E8001800A8A808 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +54,7 @@
 		E949A02025E640C700A8A808 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E949A02225E6782900A8A808 /* PlaceHolderedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderedTextView.swift; sourceTree = "<group>"; };
 		E949A02425E679C400A8A808 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		E949A02625E6993B00A8A808 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		E949A02625E6993B00A8A808 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E949A02825E769BA00A8A808 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		E949A02A25E76A2F00A8A808 /* MultiExhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiExhibit.swift; sourceTree = "<group>"; };
 		E949A02C25E76ACF00A8A808 /* Exhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exhibit.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		E949A03025E76F2F00A8A808 /* PagedExhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedExhibit.swift; sourceTree = "<group>"; };
 		E949A03225E7BCA000A8A808 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		E949A03325E7BCA000A8A808 /* PictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
+		E949A03625E7DD2500A8A808 /* NewExhibitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExhibitViewController.swift; sourceTree = "<group>"; };
+		E949A03825E7F4E700A8A808 /* PostExhibit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostExhibit.swift; sourceTree = "<group>"; };
+		E949A03A25E8001800A8A808 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 				E949A02C25E76ACF00A8A808 /* Exhibit.swift */,
 				E949A02E25E76CAD00A8A808 /* Meta.swift */,
 				E949A03025E76F2F00A8A808 /* PagedExhibit.swift */,
+				E949A03825E7F4E700A8A808 /* PostExhibit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,7 +153,9 @@
 				E9499FFE25E61D3500A8A808 /* SceneDelegate.swift */,
 				E949A00025E61D3500A8A808 /* LoginSelectViewController.swift */,
 				E949A02425E679C400A8A808 /* LogInViewController.swift */,
-				E949A02625E6993B00A8A808 /* homeViewController.swift */,
+				E949A02625E6993B00A8A808 /* HomeViewController.swift */,
+				E949A03625E7DD2500A8A808 /* NewExhibitViewController.swift */,
+				E949A03A25E8001800A8A808 /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,17 +299,20 @@
 				E949A03125E76F2F00A8A808 /* PagedExhibit.swift in Sources */,
 				E949A03425E7BCA000A8A808 /* PictureCell.swift in Sources */,
 				E949A01625E6299A00A8A808 /* Constants.swift in Sources */,
-				E949A02725E6993C00A8A808 /* homeViewController.swift in Sources */,
+				E949A02725E6993C00A8A808 /* HomeViewController.swift in Sources */,
 				E949A00125E61D3500A8A808 /* LoginSelectViewController.swift in Sources */,
 				E949A02125E640C700A8A808 /* StringExtension.swift in Sources */,
 				E949A02F25E76CAD00A8A808 /* Meta.swift in Sources */,
 				E949A01425E6290A00A8A808 /* ThemeColor.swift in Sources */,
 				E949A02525E679C400A8A808 /* LogInViewController.swift in Sources */,
 				E949A02925E769BB00A8A808 /* Picture.swift in Sources */,
+				E949A03925E7F4E700A8A808 /* PostExhibit.swift in Sources */,
 				E949A02325E6782900A8A808 /* PlaceHolderedTextView.swift in Sources */,
 				E949A02D25E76ACF00A8A808 /* Exhibit.swift in Sources */,
 				E9499FFD25E61D3500A8A808 /* AppDelegate.swift in Sources */,
 				E9499FFF25E61D3500A8A808 /* SceneDelegate.swift in Sources */,
+				E949A03725E7DD2600A8A808 /* NewExhibitViewController.swift in Sources */,
+				E949A03B25E8001800A8A808 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

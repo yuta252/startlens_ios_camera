@@ -24,3 +24,10 @@
 
 // homeVC
 "noImageTitle" = "No image";
+
+// newExhibitVC
+"exhibitNameText" = "Exhibit name";
+"exhibitDescriptionText" = "Exhibit description";
+"cameraButtonText" = "Take photos";
+"exhibitNameError" = "Enter exhibit name";
+"exhibitDescriptionError" = "Enter description name";
