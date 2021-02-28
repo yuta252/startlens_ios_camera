@@ -21,9 +21,23 @@ class LoginSelectViewController: UIViewController {
         setupLocale()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
+        let isLogIn = UserDefaults.standard.bool(forKey: "isLogIn")
+        // Auto login
+        if isLogIn {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeView = storyboard.instantiateViewController(identifier: "home") as! HomeViewController
+            self.navigationController?.pushViewController(homeView, animated: true)
+        }
+    }
+    
     @IBAction func logInAction(_ sender: Any) {
-        print("pushed")
-        performSegue(withIdentifier: "logIn", sender: nil)
+        let loginVC = storyboard?.instantiateViewController(identifier: "logIn") as! LogInViewController
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     func setupUI(){

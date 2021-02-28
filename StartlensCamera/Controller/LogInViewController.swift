@@ -17,6 +17,8 @@ class LogInViewController: UIViewController, UITextViewDelegate, UITextFieldDele
     @IBOutlet weak var passWordField: HoshiTextField!
     @IBOutlet weak var passWordMessage: UILabel!
     @IBOutlet weak var signinButtonText: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
     
     var authEmail = String()
     
@@ -26,10 +28,6 @@ class LogInViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         emailField.delegate = self
         passWordField.delegate = self
         setupUI()
-    }
-    
-    @IBAction func backAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func logInAction(_ sender: Any) {
@@ -61,7 +59,9 @@ class LogInViewController: UIViewController, UITextViewDelegate, UITextFieldDele
                     print("login")
                     UserDefaults.standard.set(token, forKey: "token")
                     UserDefaults.standard.set(true, forKey: "isLogIn")
-                    self.performSegue(withIdentifier: "home", sender: nil)
+                    //self.performSegue(withIdentifier: "home", sender: nil)
+                    let homeVC = self.storyboard?.instantiateViewController(identifier: "home") as! HomeViewController
+                    self.navigationController?.pushViewController(homeVC, animated: true)
                 } else {
                     print("error: cannot parse json")
                     DispatchQueue.main.async {
@@ -79,12 +79,19 @@ class LogInViewController: UIViewController, UITextViewDelegate, UITextFieldDele
         }
         
     }
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 
     func setupUI() {
         emailField.placeholder = "emailInputPlace".localized
         passWordField.placeholder = "passwordInputPlace".localized
         passWordMessage.text = "signupErrorMessage".localized
         signinButtonText.setTitle("logInButtonText".localized, for: .normal)
+        backButton.setTitle("cancelText".localized, for: .normal)
+        backButton.layer.borderWidth = 2.0
+        backButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -94,7 +101,7 @@ class LogInViewController: UIViewController, UITextViewDelegate, UITextFieldDele
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let emailaddress = emailField.text, !emailaddress.contains("@") {
-            passWordMessage.text = "emailValidMessage2"
+            passWordMessage.text = "emailValidMessage2".localized
             passWordMessage.textColor = ThemeColor.errorString
         }
     }
