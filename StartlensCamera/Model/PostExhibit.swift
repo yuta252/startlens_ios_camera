@@ -12,15 +12,16 @@ struct PostExhibit: Codable {
     var lang: String
     var name: String
     var description: String
-    var imageFile: [String]?
+    var imageFile: [String]
     
     init(lang: String, name: String, description: String) {
         self.lang = lang
         self.name = name
         self.description = description
+        self.imageFile = []
     }
     
     mutating func setImageFile(image: String) {
-        imageFile?.append(image)
+        imageFile.append(image)
     }
 }

@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var noImageTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newButtonView: UIButton!
+    @IBOutlet weak var spotNameText: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
     
     var token = String()
     var pagedExhibit: PagedExhibit?
@@ -44,16 +46,18 @@ class HomeViewController: UIViewController {
         
         fetchData()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        fetchData()
-        tableView.reloadData()
-    }
+
     
     @IBAction func newButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "newExhibit", sender: nil)
     }
     
+    @IBAction func logoutButtonAction(_ sender: Any) {
+        // logout
+        UserDefaults.standard.set(token, forKey: "")
+        UserDefaults.standard.set(false, forKey: "isLogIn")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @objc func update() {
         fetchData()
@@ -63,15 +67,36 @@ class HomeViewController: UIViewController {
     
     func setupUI() {
         noImageTitle.text = "noImageTitle".localized
-        newButtonView.layer.cornerRadius = 45.0
+        newButtonView.layer.cornerRadius = 40.0
+        newButtonView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        newButtonView.layer.shadowOpacity = 0.5
+        newButtonView.layer.shadowRadius = 10
+        newButtonView.layer.shadowColor = UIColor.gray.cgColor
+        logoutButton.setTitle("logoutText".localized, for: .normal)
     }
     
     func fetchData() {
-        let url = Constants.baseURL + Constants.exhibitURL
+        let exhibitUrl = Constants.baseURL + Constants.exhibitURL
+        let profileUrl = Constants.baseURL + Constants.multiProfileURL
+
         let headers: HTTPHeaders = [
             "Authorization": token
         ]
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+        
+        // Get Profile data
+        AF.request(profileUrl, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            
+            switch response.result {
+            case .success:
+                let json: JSON = JSON(response.data as Any)
+                self.spotNameText.text = json[json.array!.count - 1]["username"].string!
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        // Get Exhibit data
+        AF.request(exhibitUrl, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
 
             switch response.result {
             case .success:
@@ -101,13 +126,17 @@ extension HomeViewController: UITableViewDataSource {
         let exhibit = pagedExhibit?.data[indexPath.row]
 
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        cell.exhibitNameText.text = exhibit?.multiExhibits[0].name ?? "No name"
-        cell.exhibitDescriptionText.text = exhibit?.multiExhibits[0].description ?? "No description"
+        if exhibit?.multiExhibits.count != 0 {
+            cell.exhibitNameText.text = exhibit?.multiExhibits[0].name ?? "No name"
+            cell.exhibitDescriptionText.text = exhibit?.multiExhibits[0].description ?? "No description"
+        } else {
+            cell.exhibitNameText.text = "No name"
+            cell.exhibitDescriptionText.text = "No description"
+        }
         
         let pictureURL: URL?
         
         if let url = exhibit?.pictures[0].url {
-            print("url: \(indexPath.row) \(url)")
             pictureURL = URL(string: url)
         } else {
             pictureURL = URL(fileURLWithPath: Bundle.main.path(forResource: "noimage", ofType: "png")!)
@@ -132,6 +161,5 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped: \(indexPath)")
     }
 }

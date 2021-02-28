@@ -34,7 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D55ADE1ABD9A580CC6514B6 /* Pods-StartlensCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		59EB4048661EEE4987F590E2 /* Pods-StartlensCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.release.xcconfig"; path = "Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.release.xcconfig"; sourceTree = "<group>"; };
+		8025EEBAB50C85C1D5DF1670 /* Pods-StartlensCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.release.xcconfig"; sourceTree = "<group>"; };
 		B5DC6B359076DBB0B200DDCC /* Pods-StartlensCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartlensCamera.debug.xcconfig"; path = "Target Support Files/Pods-StartlensCamera/Pods-StartlensCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		DCEE21563BCDBA616EE7D315 /* Pods_StartlensCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartlensCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9499FF925E61D3500A8A808 /* StartlensCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StartlensCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,8 @@
 			children = (
 				B5DC6B359076DBB0B200DDCC /* Pods-StartlensCamera.debug.xcconfig */,
 				59EB4048661EEE4987F590E2 /* Pods-StartlensCamera.release.xcconfig */,
+				3D55ADE1ABD9A580CC6514B6 /* Pods-StartlensCamera.debug.xcconfig */,
+				8025EEBAB50C85C1D5DF1670 /* Pods-StartlensCamera.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -480,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakanoYuta.StartlensCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -499,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakanoYuta.StartlensCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

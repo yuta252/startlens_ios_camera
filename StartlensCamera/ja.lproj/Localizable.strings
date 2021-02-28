@@ -9,6 +9,8 @@
 
 // Common
 "settingVersionNumber" = "1.0.0";
+"cancelText" = "キャンセル";
+"sendText" = "送信";
 
 // LogInSelectVC
 "logInButtonText" = "ログイン";
@@ -23,6 +25,7 @@
 "emailValidMessage2" = "メールアドレスが正しいフォーマットではありません";
 
 // homeVC
+"logoutText" = "ログアウト";
 "noImageTitle" = "画像はありません";
 
 // newExhibitVC
@@ -31,3 +34,8 @@
 "cameraButtonText" = "写真を撮る";
 "exhibitNameError" = "対象物名称を入力してください";
 "exhibitDescriptionError" = "対象物説明を入力してください";
+
+// CameraVC
+"numberTitleText" = "撮影数";
+"noPictureErrorText" = "送信する写真がありません";
+"pictureErrorText" = "送信に失敗しました。もう一度お試しください";

@@ -17,6 +17,7 @@ class NewExhibitViewController: UIViewController, UITextViewDelegate, UITextFiel
     @IBOutlet weak var exhibitDescriptionView: PlaceHolderedTextView!
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var cancelButtonText: UIBarButtonItem!
     
     var postExhibit: PostExhibit?
     
@@ -30,9 +31,12 @@ class NewExhibitViewController: UIViewController, UITextViewDelegate, UITextFiel
     }
     
     func setupUI() {
+        cancelButtonText.title = "cancelText".localized
         exhibitNameText.text = "exhibitNameText".localized
         exhibitDescriptionText.text = "exhibitDescriptionText".localized
-        cameraButton.setTitle("cameraButtonText", for: .normal)
+        exhibitDescriptionView.layer.borderColor = UIColor.lightGray.cgColor
+        exhibitDescriptionView.layer.borderWidth = 1.0
+        cameraButton.setTitle("cameraButtonText".localized, for: .normal)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -44,6 +48,21 @@ class NewExhibitViewController: UIViewController, UITextViewDelegate, UITextFiel
         if exhibitDescriptionView.isFirstResponder {
             exhibitDescriptionView.resignFirstResponder()
         }
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        exhibitDescriptionView.layer.borderColor = ThemeColor.main.cgColor
+        exhibitDescriptionView.layer.borderWidth = 2.0
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        exhibitDescriptionView.layer.borderColor = UIColor.lightGray.cgColor
+        exhibitDescriptionView.layer.borderWidth = 1.0
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cameraButtonAction(_ sender: Any) {
